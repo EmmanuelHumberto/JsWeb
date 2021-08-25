@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aparecida Nutrição</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1	 class="titulo">Aparecida Nutrição</h1>
+    </div>
+</header>
+<main>
+    <section class="container">
+        <h2>Meus pacientes</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Peso(kg)</th>
+                <th>Altura(m)</th>
+                <th>Gordura Corporal(%)</th>
+                <th>IMC</th>
+            </tr>
+            </thead>
+            <tbody class="tabela-pacientes">
+            <tr class="paciente" >
+                <td class="info-nome">Bruxas 1</td>
+                <td class="info-peso">125</td>
+                <td class="info-altura">2.5</td>
+                <td class="info-gordura">10</td>
+                <td class="info-imc">0</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+<section class="container">
+    <h2 id="titulo-form">Adicionar novo paciente</h2>
+    <form id="form-add">
+        <div class="grupo">
+            <label for="nome">Nome:</label>
+            <input id="nome" name="nome" type="text" placeholder="digite o nome do seu paciente" class="campo">
+        </div>
+        <div class="grupo">
+            <label for="peso">Peso:</label>
+            <input id="peso" name="peso" type="text" placeholder="digite o peso do seu paciente" class="campo campo-medio">
+        </div>
+        <div class="grupo">
+            <label for="altura">Altura:</label>
+            <input id="altura" name="altura" type="text" placeholder="digite a altura do seu paciente" class="campo campo-medio">
+        </div>
+        <div class="grupo">
+            <label for="gordura">% de Gordura:</label>
+            <input id="gordura" name="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente" class="campo campo-medio">
+        </div>
+
+        <button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
+    </form>
+</section>
+<script src="calcImc.js" type="module"></script>
+<script src="botaoEnviarPaciente.js" type="module"></script>
+</body>
+</html>
