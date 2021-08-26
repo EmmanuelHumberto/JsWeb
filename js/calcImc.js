@@ -15,14 +15,15 @@ for (var i = 0; i < pacientes.length ; i++) {
         tdPeso.textContent = "Peso inválido!";
         pesoEhValido = false;
         paciente.classList.add("paciente-invalido");
+    }
 
-    }else if (altura <= 0 || altura >= 3) {
+    if (altura <= 0 || altura >= 3) {
         console.log("Altura inválida!");
         tdAltura.textContent = "Altura inválida!";
         alturaEhValida = false;
         paciente.classList.add("paciente-invalido");
-
-    }else if (alturaEhValida && pesoEhValido) {
+    }
+    if (alturaEhValida && pesoEhValido) {
         var imc = peso / (altura * altura);
         tdImc.textContent = imc;
     }

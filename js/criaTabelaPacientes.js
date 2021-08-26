@@ -4,30 +4,12 @@ export function criaTabelaPaciente(paciente){
     var pacienteTr = document.createElement("tr");
     pacienteTr.classList.add("paciente");
 
-    /*-Cria elementos td e classes */
-    var nomeTd = montaColunaTabela('paciente.nome', 'info-nome');
-    var pesoTd = montaColunaTabela('paciente.peso', 'info-peso');
-    var alturaTd = montaColunaTabela('paciente.altura', 'info-altura');
-    var gorduraTd = montaColunaTabela('paciente.gordura', 'info-gordura');
-    var imcTd = montaColunaTabela('paciente.imc', 'info-imc');
-
-    /*-Atribuindo valor as td's */
-    nomeTd.textContent = paciente.nome;
-    pesoTd.textContent = paciente.peso;
-    alturaTd.textContent = paciente.altura;
-    gorduraTd.textContent = paciente.gordura;
-    imcTd.textContent = paciente.imc;
-
-    /*-Colocando elementos td dentro de tr */
-    pacienteTr.appendChild(nomeTd);
-    pacienteTr.appendChild(pesoTd);
-    pacienteTr.appendChild(alturaTd);
-    pacienteTr.appendChild(gorduraTd);
-    pacienteTr.appendChild(imcTd);
-
-    /*-Colocando tr dentro de tbody */
-    var tabela = document.querySelector(".tabela-pacientes");
-    tabela.appendChild(pacienteTr);
+    /*-Colocando elementos td dentro de tr e criando as td e class*/
+    pacienteTr.appendChild(montaColunaTabela(paciente.nome, 'info-nome'));
+    pacienteTr.appendChild(montaColunaTabela(paciente.peso, 'info-peso'));
+    pacienteTr.appendChild(montaColunaTabela(paciente.altura, 'info-altura'));
+    pacienteTr.appendChild(montaColunaTabela(paciente.gordura, 'info-gordura'));
+    pacienteTr.appendChild(montaColunaTabela(paciente.imc, 'info-imc'));
 
     return pacienteTr;
 }

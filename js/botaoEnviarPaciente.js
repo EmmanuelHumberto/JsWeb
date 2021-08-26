@@ -15,5 +15,12 @@ botaoAdicionar.addEventListener("click", function(event) {
 
     /*-Cria os elementos e tr e td*/
     var pacienteTr = criaTabelaPaciente(paciente);
+
+    /*-Colocando tr dentro de tbody */
+    var tabela = document.querySelector(".tabela-pacientes");
+    tabela.appendChild(pacienteTr);
+
+    /*Limpando formulário*/
+    form.reset();
 });
 

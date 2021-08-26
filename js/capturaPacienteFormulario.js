@@ -8,6 +8,10 @@ export function capturaPacienteFormulario(form){
         altura: form.altura.value,
         gordura: form.gordura.value,
         imc: calculaImc(form.peso.value, form.altura.value)
+
     }
     return paciente;
+}
+export function validaPaciente(){
+
 }
