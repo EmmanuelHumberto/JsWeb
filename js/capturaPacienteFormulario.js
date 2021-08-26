@@ -12,6 +12,3 @@ export function capturaPacienteFormulario(form){
     }
     return paciente;
 }
-export function validaPaciente(){
-
-}

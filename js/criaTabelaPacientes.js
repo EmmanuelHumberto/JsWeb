@@ -1,3 +1,5 @@
+import {validaPeso} from "./calcImc.js";
+
 export function criaTabelaPaciente(paciente){
 
     /*-Cria elemento tr e class */
@@ -20,3 +22,10 @@ function  montaColunaTabela(dado, classe){
     td.classList.add(classe);
     return td;
 }
+
+export function validaPaciente(paciente){
+    if(validaPeso(paciente.peso)){
+        return true;
+    }
+}
+

@@ -1,4 +1,4 @@
-import {criaTabelaPaciente} from "./criaTabelaPacientes.js";
+import {criaTabelaPaciente, validaPaciente} from "./criaTabelaPacientes.js";
 import {capturaPacienteFormulario} from "./capturaPacienteFormulario.js";
 
 /*Botão*/
@@ -15,6 +15,11 @@ botaoAdicionar.addEventListener("click", function(event) {
 
     /*-Cria os elementos e tr e td*/
     var pacienteTr = criaTabelaPaciente(paciente);
+
+    if(!validaPaciente(paciente)) {
+        console.log("Paciente Invalido");
+        return;
+    }
 
     /*-Colocando tr dentro de tbody */
     var tabela = document.querySelector(".tabela-pacientes");
