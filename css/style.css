@@ -1,5 +1,5 @@
 *{
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 body{
@@ -135,4 +135,7 @@ button[disabled=disabled], button:disabled {
 .paciente-invalido {
     background: crimson;
     color: orange;
+}
+#msg-erro{
+    color: darkred;
 }

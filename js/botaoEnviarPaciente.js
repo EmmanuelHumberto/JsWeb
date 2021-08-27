@@ -16,8 +16,9 @@ botaoAdicionar.addEventListener("click", function(event) {
     /*-Cria os elementos e tr e td*/
     var pacienteTr = criaTabelaPaciente(paciente);
 
-    if(!validaPaciente(paciente)) {
-        console.log("Paciente Invalido");
+    var erro = validaPaciente(paciente);
+    if(erro.length > 0) {
+        exibeMsgErro(erro);
         return;
     }
 
@@ -27,5 +28,20 @@ botaoAdicionar.addEventListener("click", function(event) {
 
     /*Limpando formulário*/
     form.reset();
+
+    var mensagensErro = document.querySelector("#msg-erro");
+    mensagensErro.innerHTML = "";
+
 });
 
+function  exibeMsgErro(erros){
+
+    var ul = document.querySelector("#msg-erro");
+    ul.innerHTML = " ";
+
+    erros.forEach(function (erro){
+        var li = document.createElement("li")
+        li.textContent = erro;
+        ul.appendChild(li);
+    });
+}

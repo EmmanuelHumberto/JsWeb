@@ -1,4 +1,6 @@
+
 var pacientes = document.querySelectorAll(".paciente");
+
 for (var i = 0; i < pacientes.length ; i++) {
 
     var paciente = pacientes[i];
@@ -31,8 +33,9 @@ for (var i = 0; i < pacientes.length ; i++) {
     }
 }
 
-export function validaPeso(peso){
-    if(peso > 0 && peso < 1000){
+export function validaPeso(peso) {
+
+    if(peso > 0 && peso < 1000) {
         return true;
     }
     else{
@@ -40,9 +43,9 @@ export function validaPeso(peso){
     }
 }
 
-export function validaAltura(){
+export function validaAltura(altura) {
 
-    if(altura > 0 && altura < 3){
+    if(altura > 0 && altura < 3) {
         return true;
     }
     else{
@@ -50,7 +53,7 @@ export function validaAltura(){
     }
 }
 
-export function calculaImc(peso, altura){
+export function calculaImc(peso, altura) {
    var imc = 0;
    imc = peso / (altura**2);
    return imc.toFixed(2);

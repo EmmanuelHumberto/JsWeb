@@ -1,6 +1,6 @@
-import {validaPeso} from "./calcImc.js";
+import {validaAltura, validaPeso} from "./calcImc.js";
 
-export function criaTabelaPaciente(paciente){
+export function criaTabelaPaciente(paciente) {
 
     /*-Cria elemento tr e class */
     var pacienteTr = document.createElement("tr");
@@ -16,7 +16,7 @@ export function criaTabelaPaciente(paciente){
     return pacienteTr;
 }
 
-function  montaColunaTabela(dado, classe){
+function  montaColunaTabela(dado, classe) {
     var td = document.createElement("td");
     td.textContent = dado;
     td.classList.add(classe);
@@ -24,8 +24,13 @@ function  montaColunaTabela(dado, classe){
 }
 
 export function validaPaciente(paciente){
-    if(validaPeso(paciente.peso)){
-        return true;
-    }
-}
 
+        var erros = [];
+        if (paciente.nome.length === 0) erros.push("O nome não pode ser em branco");
+        if (paciente.gordura.length === 0) erros.push("A gordura não pode ser em branco");
+        if (paciente.peso.length ===0 ) erros.push("O peso não pode ser em branco");
+        if (paciente.altura.length === 0) erros.push("A altura não pode ser em branco");
+        if (!validaPeso(paciente.peso.length === 0)) erros.push("Peso é inválido");
+        if (!validaAltura(paciente.altura.length === 0)) erros.push("Altura é inválida");
+        return erros;
+}
