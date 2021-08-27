@@ -139,3 +139,7 @@ button[disabled=disabled], button:disabled {
 #msg-erro{
     color: darkred;
 }
+.fadeOut{
+    opacity: 0;
+    transition:0.5s;
+}
