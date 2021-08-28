@@ -1,4 +1,4 @@
-import {validaAltura, validaPeso} from "./calcImc.js";
+import {validaAltura, validaPeso} from "../calcImc.js";
 
 export function criaTabelaPaciente(paciente) {
 

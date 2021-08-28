@@ -1,4 +1,4 @@
-import {calculaImc} from "./calcImc.js";
+import {calculaImc} from "../calcImc.js";
 
 export function capturaPacienteFormulario(form){
 

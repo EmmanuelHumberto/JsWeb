@@ -1,5 +1,5 @@
-import {criaTabelaPaciente, validaPaciente} from "./criaTabelaPacientes.js";
-import {capturaPacienteFormulario} from "./capturaPacienteFormulario.js";
+import {criaTabelaPaciente, validaPaciente} from "./form/criaTabelaPacientes.js";
+import {capturaPacienteFormulario} from "./form/capturaPacienteFormulario.js";
 
 /*Botão*/
 var botaoAdicionar = document.querySelector("#adicionar-paciente");
@@ -38,7 +38,6 @@ function  exibeMsgErro(erros){
 
     var ul = document.querySelector("#msg-erro");
     ul.innerHTML = "";
-
     erros.forEach(function (erro){
         var li = document.createElement("li")
         li.textContent = erro;
