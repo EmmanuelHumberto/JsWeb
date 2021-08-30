@@ -32,6 +32,15 @@ for (var i = 0; i < pacientes.length ; i++) {
         tdImc.textContent = imc;
     }
 }
+/*#######################################################################*/
+
+export function calculaImc(peso, altura) {
+    var imc = 0;
+    imc = peso / (altura**2);
+    return imc.toFixed(2);
+}
+
+/*#######################################################################*/
 
 export function validaPeso(peso) {
 
@@ -53,8 +62,3 @@ export function validaAltura(altura) {
     }
 }
 
-export function calculaImc(peso, altura) {
-   var imc = 0;
-   imc = peso / (altura**2);
-   return imc.toFixed(2);
-}

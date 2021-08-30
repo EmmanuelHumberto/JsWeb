@@ -1,20 +1,26 @@
-import {criaTabelaPaciente, validaPaciente} from "./form/criaTabelaPacientes.js";
+import {validaPaciente} from "./form/criaTabelaPacientes.js";
 import {capturaPacienteFormulario} from "./form/capturaPacienteFormulario.js";
+import {adicionaPacienteNaTabela} from "./adicionaPacienteNaTabela.js";
+
 
 /*Botão*/
 var botaoAdicionar = document.querySelector("#adicionar-paciente");
+
+/*#######################################################################*/
+
 /*Add escutador de click*/
 botaoAdicionar.addEventListener("click", function(event) {
+
+    /*#######################################################################*/
     /*previvir comportamento padrão */
     event.preventDefault();
-
     var form = document.querySelector("#form-add");
 
     /*-Extraindo dados do paciente no form*/
     var paciente = capturaPacienteFormulario(form);
 
-    /*-Cria os elementos e tr e td*/
-    var pacienteTr = criaTabelaPaciente(paciente);
+    /*-Add dados do paciente na tabela*/
+    adicionaPacienteNaTabela(paciente);
 
     var erro = validaPaciente(paciente);
     if(erro.length > 0) {
@@ -22,18 +28,13 @@ botaoAdicionar.addEventListener("click", function(event) {
         return;
     }
 
-    /*-Colocando tr dentro de tbody */
-    var tabela = document.querySelector(".tabela-pacientes");
-    tabela.appendChild(pacienteTr);
-
     /*Limpando formulário*/
     form.reset();
 
     var mensagensErro = document.querySelector("#msg-erro");
     mensagensErro.innerHTML = "";
-
+    /*#######################################################################*/
 });
-
 function  exibeMsgErro(erros){
 
     var ul = document.querySelector("#msg-erro");
@@ -44,3 +45,4 @@ function  exibeMsgErro(erros){
         ul.appendChild(li);
     });
 }
+

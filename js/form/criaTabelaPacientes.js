@@ -25,12 +25,12 @@ function  montaColunaTabela(dado, classe) {
 
 export function validaPaciente(paciente){
 
-        var erros = [];
-        if (paciente.nome.length === 0) erros.push("Campo nome é obrigatório");
-        if (paciente.gordura.length === 0) erros.push("Campo gordura é obrigatório");
-        if (paciente.peso.length ===0 ) erros.push("Campo peso é obrigatório");
-        if (paciente.altura.length === 0) erros.push("Campo altura é obrigatório");
-        if (!validaPeso(paciente.peso)) erros.push("Peso é inválido");
-        if (!validaAltura(paciente.altura)) erros.push("Altura é inválida");
-        return erros;
+    var erros = [];
+    if (paciente.nome.length === 0) erros.push("Campo nome é obrigatório");
+    if (paciente.gordura.length === 0) erros.push("Campo gordura é obrigatório");
+    if (paciente.peso.length ===0 ) erros.push("Campo peso é obrigatório");
+    if (paciente.altura.length === 0) erros.push("Campo altura é obrigatório");
+    if (!validaPeso(paciente.peso)) erros.push("Peso é inválido");
+    if (!validaAltura(paciente.altura)) erros.push("Altura é inválida");
+    return erros;
 }
