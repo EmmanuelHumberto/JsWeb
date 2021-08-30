@@ -23,7 +23,7 @@ botaoAdicionar.addEventListener("click", function() {
         if(xhr.status === 200) {
 
             /*-A XMLHttpRequestpropriedade somente leitura responseText retorna o texto
-       recebido de um servidor após o envio de uma solicitação.*/
+            recebido de um servidor após o envio de uma solicitação.*/
             var resposta = xhr.responseText;
             console.log(resposta);
             /*-typeof retorna uma string indicando o tipo de um operando.*/
