@@ -4,8 +4,6 @@ var botaoAdicionar = document.querySelector("#buscar-pacientes");
 
 botaoAdicionar.addEventListener("click", function() {
 
-    /*#######################################################################*/
-
     /*-XMLHttpRequest é um objeto que fornece funcionalidade ao cliente para
     transferir dados entre um cliente e um servidor*/
     var xhr = new XMLHttpRequest();
@@ -14,8 +12,6 @@ botaoAdicionar.addEventListener("click", function() {
     escolher Nova janela no menu Arquivo. O urlparâmetro especifica o URL a ser
     obtido e carregado na nova janela.*/
     xhr.open("GET", "https://api-pacientes.herokuapp.com/pacientes");
-
-    /*#######################################################################*/
 
     /*-O evento de load é acionado quando um recurso e seus recursos
     dependentes terminaram de carregar.*/
